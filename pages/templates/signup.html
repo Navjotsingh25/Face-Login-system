@@ -1,0 +1,30 @@
+{% extends 'common.html' %}
+
+{% block title %}  <title>Signup</title> {% endblock title %}
+
+{% block content %}
+
+
+
+<form action = "" method ="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for fm  in form %}
+    {{ fm.label }} {{ fm }} {{ fm.errors|striptags }} <br><br>
+    {% endfor %} 
+    {% comment %} {{ form.as_p }} {% endcomment %}
+    <br>
+
+
+
+
+<div id = "takePhoto">
+
+    
+    <input type="submit" value = "Signup">
+   </div> 
+
+</form>
+ 
+
+
+{% endblock %}
